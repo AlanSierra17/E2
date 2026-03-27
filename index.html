@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>E2 Software Factory | Modernización de Sistemas &amp; IA Agéntica — Bogotá</title>
+  <meta name="description"
+    content="E2 Software Factory: expertos en modernización de sistemas legacy, inteligencia artificial agéntica y automatización RPA. Software de alto rendimiento para empresas en Bogotá, Colombia." />
+  <meta name="keywords"
+    content="Software Factory Bogotá, Modernización de Sistemas, IA Agéntica, RPA, Automatización, Desarrollo de Software Colombia, Micro SaaS, E-commerce" />
+  <meta name="author" content="E2 Software Factory" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="E2 Software Factory | Evolución a la Potencia" />
+  <meta property="og:description"
+    content="Transformamos empresas tradicionales en potencias digitales. Modernización legacy, IA agéntica y soluciones de alto rendimiento." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CO" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css" />
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER / NAVIGATION
+       ============================================================ -->
+  <header class="site-header" role="banner">
+    <a href="#" class="site-header__logo" aria-label="E2 Software Factory — Inicio">
+      <span class="material-symbols-outlined site-header__logo-icon">factory</span>
+      <span class="site-header__logo-text">E<span class="site-header__logo-exponent">²</span></span>
+    </a>
+
+    <nav class="site-header__nav" aria-label="Navegación principal">
+      <a class="site-header__nav-link site-header__nav-link--active" href="#servicios" data-scroll>Servicios</a>
+      <a class="site-header__nav-link" href="#metodologia" data-scroll>Metodología</a>
+      <a class="site-header__nav-link" href="#contacto" data-scroll>Contacto</a>
+    </nav>
+
+    <button class="site-header__menu-btn" id="menu-toggle" aria-label="Abrir menú">
+      <span class="material-symbols-outlined">menu</span>
+    </button>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-label="Menú de navegación">
+    <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Cerrar menú">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <a class="mobile-nav__link" href="#servicios" data-scroll>Servicios</a>
+    <a class="mobile-nav__link" href="#metodologia" data-scroll>Metodología</a>
+    <a class="mobile-nav__link" href="#contacto" data-scroll>Contacto</a>
+  </div>
+
+  <main>
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg">
+        <img class="hero__bg-img" loading="eager"
+          alt="Red abstracta de tecnología con nodos brillantes en tonos de azul profundo"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiZXUZsMANFpxFWLm-C3M5m-aBXQtHbjgP5F2vcP_bxy8rgeJm_6uqGLbAtQ_ZJTfNO5tz0DIK9ezu9ZbRL1zNT5PZk2vNEEp3OXlEtq-Zve4G1Z8wW1JRASV_0uKEahtHY7Omc1saHnOjTGQEzIbk9aIWPyyAviEOupDsOJqq9o5UG0eEIdUkcKuthaQnCNeEkB2BF59KKlFn7K_2gexuKeSWSbLRKajT9v5v12rR6GUM7-aMmPlH2pf9xXdHE8PseoIKwu-CpNY2" />
+        <div class="hero__bg-overlay"></div>
+      </div>
+
+      <div class="hero__content">
+        <span class="hero__tag">Software Factory de Alto Rendimiento</span>
+        <h1 class="hero__title">E²: Multiplica la eficiencia de tu empresa.</h1>
+        <p class="hero__subtitle">
+          Transformamos empresas tradicionales en potencias digitales. Expertos en modernización de sistemas,
+          inteligencia artificial agéntica y soluciones de software de alto rendimiento para el mercado colombiano.
+        </p>
+        <button class="hero__cta" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+          Solicitar Auditoría de Madurez Digital
+          <span class="material-symbols-outlined hero__cta-icon">arrow_forward</span>
+        </button>
+      </div>
+
+      <div class="hero__exponent" aria-hidden="true">²</div>
+    </section>
+
+    <!-- ============================================================
+         PROBLEM – "El Desafío Actual"
+         ============================================================ -->
+    <section class="problem" id="desafio">
+      <div class="container">
+        <div class="problem__header reveal">
+          <span class="problem__label">El Desafío Actual</span>
+          <h2 class="problem__title">La fricción tecnológica frena tu crecimiento.</h2>
+        </div>
+
+        <div class="problem__grid reveal-stagger">
+          <!-- Card 1 -->
+          <div class="problem__card reveal">
+            <div class="problem__card-icon-wrap">
+              <span class="material-symbols-outlined filled problem__card-icon">speed</span>
+            </div>
+            <h3 class="problem__card-title">Sistemas Lentos</h3>
+            <p class="problem__card-text">
+              Infraestructuras legacy que no escalan y consumen recursos operativos valiosos. Cada minuto de latencia
+              es un cliente que se pierde frente a la competencia.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="problem__card reveal">
+            <div class="problem__card-icon-wrap">
+              <span class="material-symbols-outlined filled problem__card-icon">sync_disabled</span>
+            </div>
+            <h3 class="problem__card-title">Procesos Manuales</h3>
+            <p class="problem__card-text">
+              Dependencia excesiva en tareas repetitivas que generan errores humanos, cuellos de botella operativos
+              y costos ocultos que erosionan la rentabilidad.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="problem__card reveal">
+            <div class="problem__card-icon-wrap">
+              <span class="material-symbols-outlined filled problem__card-icon">extension_off</span>
+            </div>
+            <h3 class="problem__card-title">Software Desconectado</h3>
+            <p class="problem__card-text">
+              Islas de información que impiden una visión 360° de la operación. Sin integración, la toma de
+              decisiones se basa en datos incompletos o desactualizados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES – "Ingeniería a la Potencia"
+         ============================================================ -->
+    <section class="services" id="servicios">
+      <div class="container">
+        <div class="services__header reveal">
+          <h2 class="services__title">Ingeniería a la Potencia.</h2>
+          <p class="services__subtitle">
+            Nuestra suite de servicios está diseñada para inyectar velocidad y precisión en cada capa de su
+            arquitectura digital. Desde la base de datos hasta la interfaz de usuario.
+          </p>
+        </div>
+
+        <div class="services__grid reveal-stagger">
+          <!-- Service 1 — Dark -->
+          <div class="service-card service-card--dark reveal">
+            <span class="material-symbols-outlined service-card__icon">settings_backup_restore</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Modernización Legacy</h3>
+              <p class="service-card__desc">
+                Transición fluida de monolitos antiguos a arquitecturas de microservicios modernas y escalables.
+                Migramos sin interrumpir su operación.
+              </p>
+            </div>
+            <span class="service-card__exponent" aria-hidden="true">²</span>
+          </div>
+
+          <!-- Service 2 — Light -->
+          <div class="service-card service-card--light reveal">
+            <span class="material-symbols-outlined service-card__icon">psychology</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title">IA Agéntica</h3>
+              <p class="service-card__desc">
+                Implementación de agentes autónomos de inteligencia artificial que resuelven problemas complejos
+                sin intervención humana constante.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 3 — Light -->
+          <div class="service-card service-card--light reveal">
+            <span class="material-symbols-outlined service-card__icon">robot_2</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Automatización RPA</h3>
+              <p class="service-card__desc">
+                Robots de software diseñados para ejecutar flujos de trabajo críticos con precisión absoluta
+                y tasa de error cero.
+              </p>
+            </div>
+          </div>
+
+          <!-- Service 4 — Dark -->
+          <div class="service-card service-card--dark reveal">
+            <span class="material-symbols-outlined service-card__icon">shopping_cart</span>
+            <div class="service-card__body">
+              <h3 class="service-card__title">Micro SaaS &amp; E-commerce</h3>
+              <p class="service-card__desc">
+                Plataformas de venta transaccional de alto rendimiento optimizadas para conversión y recompra
+                en el mercado latinoamericano.
+              </p>
+            </div>
+            <span class="service-card__exponent" aria-hidden="true">²</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         METHODOLOGY – "Nuestra Ruta"
+         ============================================================ -->
+    <section class="methodology" id="metodologia">
+      <div class="container">
+        <div class="methodology__header reveal">
+          <span class="methodology__label">Nuestra Ruta</span>
+          <h2 class="methodology__title">Metodología E2</h2>
+        </div>
+
+        <div class="timeline">
+          <!-- Step 01 -->
+          <div class="timeline__step reveal">
+            <div class="timeline__marker">
+              <div class="timeline__number">01</div>
+              <div class="timeline__line"></div>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__step-title">Diagnóstico</h3>
+              <p class="timeline__step-text">
+                Análisis profundo de la deuda técnica y puntos de dolor operativo de su infraestructura actual.
+                Identificamos exactamente dónde se pierde valor.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 02 -->
+          <div class="timeline__step reveal">
+            <div class="timeline__marker">
+              <div class="timeline__number">02</div>
+              <div class="timeline__line"></div>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__step-title">Arquitectura E2</h3>
+              <p class="timeline__step-text">
+                Diseño de una solución modular, resiliente y preparada para el escalamiento exponencial. Cada
+                componente es independiente y desplegable por separado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 03 -->
+          <div class="timeline__step reveal">
+            <div class="timeline__marker">
+              <div class="timeline__number">03</div>
+              <div class="timeline__line"></div>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__step-title">Desarrollo Modular</h3>
+              <p class="timeline__step-text">
+                Construcción iterativa con sprints cortos, enfocada en la calidad del código, la seguridad de la
+                información y la entrega continua de valor funcional.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 04 (Final) -->
+          <div class="timeline__step timeline__step--final reveal">
+            <div class="timeline__marker">
+              <div class="timeline__number">04</div>
+            </div>
+            <div class="timeline__content">
+              <h3 class="timeline__step-title">Despliegue y Evolución</h3>
+              <p class="timeline__step-text">
+                Puesta en marcha asistida con monitoreo continuo y optimización basada en datos reales de
+                producción. Su software mejora cada día.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WHY E2
+         ============================================================ -->
+    <section class="why-e2" id="por-que">
+      <div class="container">
+        <div class="why-e2__grid">
+          <div class="why-e2__content reveal">
+            <h2 class="why-e2__title">¿Por qué confiar en la Software Factory?</h2>
+            <ul class="why-e2__list">
+              <li class="why-e2__item">
+                <span class="material-symbols-outlined why-e2__item-icon">check_circle</span>
+                <div>
+                  <h4 class="why-e2__item-title">Offline-First</h4>
+                  <p class="why-e2__item-text">
+                    Sistemas que nunca se detienen, diseñados para operar incluso en condiciones de conectividad
+                    nula. Ideal para operaciones en campo en Colombia.
+                  </p>
+                </div>
+              </li>
+              <li class="why-e2__item">
+                <span class="material-symbols-outlined why-e2__item-icon">check_circle</span>
+                <div>
+                  <h4 class="why-e2__item-title">Robustez Empresarial</h4>
+                  <p class="why-e2__item-text">
+                    Arquitecturas endurecidas contra fallos, probadas bajo cargas críticas de trabajo. Su
+                    operación no puede permitirse caídas inesperadas.
+                  </p>
+                </div>
+              </li>
+              <li class="why-e2__item">
+                <span class="material-symbols-outlined why-e2__item-icon">check_circle</span>
+                <div>
+                  <h4 class="why-e2__item-title">Soporte Local (Bogotá)</h4>
+                  <p class="why-e2__item-text">
+                    Presencia física y soporte técnico directo en su zona horaria, sin intermediarios
+                    internacionales. Estamos donde usted está.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="why-e2__visual reveal">
+            <div class="why-e2__img-frame">
+              <img class="why-e2__img" loading="lazy"
+                alt="Estación de trabajo de ingeniería de software con monitores mostrando código y visualizaciones de datos"
+                src="assets/software-workspace.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="contact__grid">
+          <!-- Left: Form -->
+          <div>
+            <h2 class="contact__title reveal">Hablemos de su próximo salto.</h2>
+
+            <form class="contact-form reveal" id="contact-form" novalidate>
+              <!-- Nombre -->
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="field-nombre">Nombre</label>
+                <input class="contact-form__input" type="text" id="field-nombre"
+                  placeholder="Escriba su nombre completo" autocomplete="name" />
+                <span class="contact-form__error"></span>
+              </div>
+
+              <!-- Empresa + Email -->
+              <div class="contact-form__row">
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-empresa">Empresa</label>
+                  <input class="contact-form__input" type="text" id="field-empresa" placeholder="Nombre de su empresa"
+                    autocomplete="organization" />
+                  <span class="contact-form__error"></span>
+                </div>
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-email">Correo Corporativo</label>
+                  <input class="contact-form__input" type="email" id="field-email" placeholder="nombre@suempresa.com"
+                    autocomplete="email" />
+                  <span class="contact-form__error"></span>
+                </div>
+              </div>
+
+              <!-- Sector -->
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="field-sector">Sector de la Empresa</label>
+                <div class="contact-form__select-wrap">
+                  <select class="contact-form__select" id="field-sector">
+                    <option value="">Seleccione un sector…</option>
+                    <option value="manufactura">Manufactura e Industria</option>
+                    <option value="retail">Retail y Comercio</option>
+                    <option value="logistica">Logística y Transporte</option>
+                    <option value="financiero">Servicios Financieros</option>
+                    <option value="salud">Salud y Farmacéutica</option>
+                    <option value="agro">Agroindustria</option>
+                    <option value="inmobiliario">Sector Inmobiliario</option>
+                    <option value="educacion">Educación</option>
+                    <option value="gobierno">Gobierno y Sector Público</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+                <span class="contact-form__error"></span>
+              </div>
+
+              <!-- Dolor -->
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="field-dolor">Principal dolor de cabeza tecnológico</label>
+                <textarea class="contact-form__textarea" id="field-dolor" rows="3"
+                  placeholder="Describa brevemente su desafío tecnológico más urgente…"></textarea>
+                <span class="contact-form__error"></span>
+              </div>
+
+              <button class="contact-form__submit" type="submit">Enviar Solicitud</button>
+            </form>
+
+            <div class="contact-form__success" id="form-success">
+              <strong>¡Solicitud recibida!</strong> Nuestro equipo de ingeniería revisará su caso y se comunicará con
+              usted en las próximas 24 horas hábiles. Gracias por confiar en E2.
+            </div>
+          </div>
+
+          <!-- Right: Map & Details -->
+          <div class="contact__info reveal">
+            <div class="contact__map">
+              <img class="contact__map-img" loading="lazy"
+                alt="Vista arquitectónica del centro de Bogotá en alto contraste"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB06xThBfShCfrN1_PYfxNNgSPX6HQj8-inUPHOQahgRFcyEpsPJBCkbt8W1sGZ5tU0OZPjrm3Anou0uQfEKix68SBa0GmuIr_7flQQzLLVvc3C9rl-VeDu3MhLmL6Ylt8Y2NiTHBaDDrOGFeoioMAb6D4qoW_lc4II6DRhBM8FXpaHsBGvLd-4df2rdwcbdTFKPqMoMcBwIvOxBTUmR0PNUBY8cTxQ9JaGszpf42Aa6iLYakTiMhoUYp7f_iciQVBsIWLZuXg5TWT2" />
+              <div class="contact__map-pin">
+                <div class="contact__map-badge">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <span class="contact__map-badge-label">HQ Bogotá</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__details">
+              <div class="contact__detail-card">
+                <span class="contact__detail-label">Contacto Directo</span>
+                <p class="contact__detail-value">contacto@e2software.com</p>
+              </div>
+              <div class="contact__detail-card">
+                <span class="contact__detail-label">LinkedIn</span>
+                <p class="contact__detail-value">@e2_factory</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <span class="site-footer__brand">E2 Software Factory</span>
+        <nav class="site-footer__links" aria-label="Enlaces del pie de página">
+          <a class="site-footer__link site-footer__link--accent" href="#servicios" data-scroll>Servicios</a>
+          <a class="site-footer__link" href="#metodologia" data-scroll>Metodología</a>
+          <a class="site-footer__link" href="#contacto" data-scroll>Contacto</a>
+          <a class="site-footer__link" href="#">Privacidad</a>
+        </nav>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copy">E2 Software Factory © 2026 — Evolución a la potencia.</p>
+        <span class="site-footer__exponent" aria-hidden="true">²</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts (deferred for performance) -->
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+  <script src="js/contact.js" defer></script>
+</body>
+
+</html>

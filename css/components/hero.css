@@ -1,0 +1,146 @@
+/* ============================================================
+   Hero Section – "The Kinetic Architect" Entry
+   ============================================================ */
+
+.hero {
+  position: relative;
+  min-height: max(50rem, 100dvh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-20) 1.5rem;
+  overflow: hidden;
+  background: var(--primary-container);
+  color: #ffffff;
+}
+
+/* --- Background Image Layer --- */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 28, 59, 0.6),
+    var(--primary-container) 60%,
+    var(--primary-container)
+  );
+}
+
+/* --- Content --- */
+.hero__content {
+  position: relative;
+  z-index: 10;
+  max-width: 36rem;
+}
+
+/* Tag Pill */
+.hero__tag {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-6);
+}
+
+.hero__title {
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: clamp(2.25rem, 5vw, var(--display-lg));
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: var(--space-6);
+}
+
+.hero__subtitle {
+  color: var(--on-primary-container);
+  font-size: var(--body-lg);
+  line-height: 1.7;
+  max-width: 32rem;
+  margin-bottom: var(--space-10);
+}
+
+/* --- CTA --- */
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: var(--body-md);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: transform var(--duration-fast) var(--ease-kinetic),
+              box-shadow var(--duration-normal) var(--ease-kinetic);
+}
+
+.hero__cta:hover {
+  box-shadow: 0 0 32px rgba(99, 247, 255, 0.3);
+}
+
+.hero__cta:active {
+  transform: scale(0.96);
+}
+
+.hero__cta-icon {
+  transition: transform var(--duration-fast) var(--ease-kinetic);
+}
+
+.hero__cta:hover .hero__cta-icon {
+  transform: translateX(4px);
+}
+
+/* --- Exponent Watermark --- */
+.hero__exponent {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: 20rem;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: rgba(255, 255, 255, 0.06);
+  pointer-events: none;
+  user-select: none;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hero__exponent {
+    display: block;
+  }
+  .hero__content {
+    margin-left: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero__content {
+    margin-left: 5rem;
+  }
+}

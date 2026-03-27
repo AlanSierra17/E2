@@ -1,0 +1,196 @@
+/* ============================================================
+   Methodology – Vertical Timeline "Nuestra Ruta"
+   ============================================================ */
+
+.methodology {
+  padding: var(--space-24) 1.5rem;
+  background: var(--surface);
+}
+
+.methodology__header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.methodology__label {
+  color: var(--primary);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: var(--label-sm);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.methodology__title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+/* --- Timeline --- */
+.timeline {
+  max-width: 48rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.timeline__step {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Number bubble + line */
+.timeline__marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.timeline__number {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: var(--body-sm);
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.timeline__step--final .timeline__number {
+  background: var(--tertiary-fixed);
+  color: var(--on-tertiary-fixed);
+}
+
+.timeline__line {
+  width: 1px;
+  flex: 1;
+  background: rgba(196, 198, 204, 0.3);
+  margin-top: 0.5rem;
+}
+
+/* Content */
+.timeline__content {
+  padding-bottom: 3rem;
+}
+
+.timeline__step-title {
+  font-family: var(--font-headline);
+  font-size: var(--title-lg);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.timeline__step-text {
+  color: var(--on-surface-variant);
+  font-size: var(--body-sm);
+  line-height: 1.6;
+}
+
+/* --- "Why E2" Section (dark) --- */
+.why-e2 {
+  padding: var(--space-24) 1.5rem;
+  background: var(--primary-container);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.why-e2__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.why-e2__content {
+  position: relative;
+  z-index: 10;
+}
+
+.why-e2__title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+  line-height: 1.15;
+}
+
+.why-e2__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.why-e2__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.why-e2__item-icon {
+  color: var(--tertiary-fixed);
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.why-e2__item-title {
+  font-weight: 700;
+  font-size: var(--body-lg);
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.why-e2__item-text {
+  color: var(--on-primary-container);
+  font-size: var(--body-sm);
+  line-height: 1.6;
+}
+
+/* Image panel */
+.why-e2__visual {
+  display: none;
+  position: relative;
+}
+
+.why-e2__img-frame {
+  aspect-ratio: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-sm);
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(3deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.why-e2__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  filter: grayscale(1);
+}
+
+@media (min-width: 768px) {
+  .why-e2__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .why-e2__visual {
+    display: block;
+  }
+}

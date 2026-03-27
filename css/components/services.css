@@ -1,0 +1,163 @@
+/* ============================================================
+   Core Services – "Ingeniería a la Potencia"
+   ============================================================ */
+
+.services {
+  padding: var(--space-24) 1.5rem;
+  background: var(--surface-container-lowest);
+}
+
+.services__header {
+  text-align: center;
+  margin-bottom: var(--space-20);
+}
+
+.services__title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.services__subtitle {
+  color: var(--on-surface-variant);
+  max-width: 40rem;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* --- Grid --- */
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+/* --- Service Card --- */
+.service-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  min-height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: var(--radius-sm);
+  transition: background var(--duration-normal) var(--ease-kinetic);
+}
+
+/* Dark variant (primary-container bg) */
+.service-card--dark {
+  background: var(--primary-container);
+}
+
+.service-card--dark:hover {
+  background: #000000;
+}
+
+/* Light variant */
+.service-card--light {
+  background: var(--surface-container);
+}
+
+.service-card--light:hover {
+  background: var(--surface-container-high);
+}
+
+/* --- Icon --- */
+.service-card__icon {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  opacity: 0.5;
+  transition: opacity var(--duration-normal);
+  font-size: 2.25rem;
+}
+
+.service-card--dark .service-card__icon {
+  color: var(--tertiary-fixed);
+}
+
+.service-card--light .service-card__icon {
+  color: var(--primary);
+}
+
+.service-card:hover .service-card__icon {
+  opacity: 1;
+}
+
+/* --- Content --- */
+.service-card__body {
+  position: relative;
+  z-index: 10;
+}
+
+.service-card--dark .service-card__title {
+  color: #ffffff;
+}
+
+.service-card--light .service-card__title {
+  color: var(--primary);
+}
+
+.service-card__title {
+  font-family: var(--font-headline);
+  font-size: var(--title-lg);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.service-card__desc {
+  font-size: var(--label-sm);
+  line-height: 1.6;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity var(--duration-normal) var(--ease-kinetic),
+              max-height var(--duration-normal) var(--ease-kinetic);
+}
+
+.service-card--dark .service-card__desc {
+  color: var(--on-primary-container);
+}
+
+.service-card--light .service-card__desc {
+  color: var(--on-surface-variant);
+}
+
+.service-card:hover .service-card__desc {
+  opacity: 1;
+  max-height: 6rem;
+}
+
+/* --- Exponent reveal on hover --- */
+.service-card__exponent {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1rem;
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: 2.25rem;
+  color: var(--tertiary-fixed);
+  transform: translateX(100%);
+  transition: transform var(--duration-normal) var(--ease-kinetic);
+}
+
+.service-card:hover .service-card__exponent {
+  transform: translateX(0);
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
