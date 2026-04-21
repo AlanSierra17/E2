@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /cookies.html
+
+Sitemap: https://www.e2software.dev/sitemap.xml
