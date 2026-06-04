@@ -1,6 +1,6 @@
 /**
  * E2 Software Factory – Contact Form
- * Simulated submission with validation for business emails and sector selection
+ * Redirects to WhatsApp with a pre-filled message
  */
 (function () {
   'use strict';
@@ -50,7 +50,7 @@
     });
   }
 
-  /* --- Validate on submit --- */
+  /* --- Validate and Redirect to WhatsApp --- */
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     clearAllErrors();
@@ -80,27 +80,46 @@
 
     // Sector
     if (!fields.sector.value) {
-      setError(fields.sector.closest('.contact-form__group'), 'Seleccione un sector.');
+      setError(fields.sector.closest('.contact-form__group'), 'Seleccione un desafío principal.');
       valid = false;
     }
 
     // Dolor
     if (!fields.dolor.value.trim()) {
-      setError(fields.dolor.closest('.contact-form__group'), 'Describa su desafío tecnológico.');
+      setError(fields.dolor.closest('.contact-form__group'), 'Describa su situación brevemente.');
       valid = false;
     }
 
     if (!valid) return;
 
-    // Simulate submission
     var btn = form.querySelector('.contact-form__submit');
     btn.disabled = true;
-    btn.textContent = 'Enviando…';
+    btn.textContent = 'Abriendo WhatsApp…';
 
+    // Construir mensaje de WhatsApp
+    var nombre = fields.nombre.value.trim();
+    var empresa = fields.empresa.value.trim();
+    var email = fields.email.value.trim();
+    var sectorSelect = fields.sector.options[fields.sector.selectedIndex].text;
+    var dolor = fields.dolor.value.trim();
+
+    var mensaje = "Hola E2 Software Factory,\n\n" +
+                  "Mi nombre es *" + nombre + "* de la empresa *" + empresa + "*.\n" +
+                  "Mi correo corporativo es: " + email + "\n\n" +
+                  "Me interesa recibir asesoría sobre mi principal desafío: *" + sectorSelect + "*.\n\n" +
+                  "Esta es nuestra situación actual:\n_" + dolor + "_";
+
+    var whatsappNumber = "573245396539"; // Número oficial
+    var whatsappUrl = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(mensaje);
+
+    // Redirigir a WhatsApp
     setTimeout(function () {
+      window.open(whatsappUrl, '_blank');
+      
+      // Mostrar estado de éxito en el formulario
       form.style.display = 'none';
       success.classList.add('is-visible');
-    }, 1200);
+    }, 500);
   });
 
   /* --- Clear individual errors on input --- */

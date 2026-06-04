@@ -1,0 +1,85 @@
+/* ============================================================
+   Specialties Section – Business Pillars
+   ============================================================ */
+
+.specialties {
+  padding: var(--space-24) 1.5rem;
+  background: var(--surface);
+}
+
+.specialties__header {
+  text-align: center;
+  margin-bottom: var(--space-20);
+}
+
+.specialties__title {
+  font-family: var(--font-headline);
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.specialties__subtitle {
+  color: var(--on-surface-variant);
+  max-width: 48rem;
+  margin-inline: auto;
+  line-height: 1.6;
+}
+
+/* --- Grid --- */
+.specialties__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* --- Specialty Card --- */
+.specialty-card {
+  position: relative;
+  background: var(--surface-container-low);
+  padding: 2.5rem 2rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: background var(--duration-normal) var(--ease-kinetic);
+}
+
+.specialty-card:hover {
+  background: var(--surface-container-highest);
+}
+
+.specialty-card__icon-wrap {
+  width: 4rem;
+  height: 4rem;
+  background: var(--primary-container);
+  color: var(--tertiary-fixed);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+}
+
+.specialty-card__icon-wrap .material-symbols-outlined {
+  font-size: 2rem;
+}
+
+.specialty-card__title {
+  font-family: var(--font-headline);
+  font-size: var(--title-lg);
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.specialty-card__text {
+  color: var(--on-surface-variant);
+  font-size: var(--body-md);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .specialties__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

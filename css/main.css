@@ -11,8 +11,12 @@
 @import 'components/navigation.css';
 @import 'components/hero.css';
 @import 'components/problem.css';
+@import 'components/specialties.css';
 @import 'components/services.css';
 @import 'components/methodology.css';
+@import 'components/metrics.css';
+@import 'components/simulator.css';
+@import 'components/faq.css';
 @import 'components/contact.css';
 @import 'components/ui.css';
 

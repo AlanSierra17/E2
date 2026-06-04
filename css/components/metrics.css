@@ -1,0 +1,59 @@
+/* ============================================================
+   Power Metrics Section
+   ============================================================ */
+
+.metrics-section {
+  padding: var(--space-16) 1.5rem;
+  background: var(--primary-container);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background accent */
+.metrics-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(99, 247, 255, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.metrics__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  position: relative;
+  z-index: 10;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-item__label {
+  font-size: var(--label-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--on-primary-container);
+}
+
+.metric-item__desc {
+  font-size: var(--body-sm);
+  color: #a0c6ff;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .metrics__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+}

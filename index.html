@@ -136,6 +136,48 @@
     </section>
 
     <!-- ============================================================
+         POWER METRICS
+         ============================================================ -->
+    <section class="metrics-section" id="impacto">
+      <div class="container">
+        <div class="metrics__grid reveal-stagger">
+          <div class="metric-item reveal">
+            <span class="metric-item__label">Optimización</span>
+            <div class="power-metric">
+              <span class="power-metric__value">+75</span>
+              <span class="power-metric__exponent">%</span>
+            </div>
+            <p class="metric-item__desc">en eficiencia de procesos repetitivos automatizados.</p>
+          </div>
+          <div class="metric-item reveal">
+            <span class="metric-item__label">Búsqueda</span>
+            <div class="power-metric">
+              <span class="power-metric__value">-80</span>
+              <span class="power-metric__exponent">%</span>
+            </div>
+            <p class="metric-item__desc">en tiempos de gestión y localización de documentos digitalizados.</p>
+          </div>
+          <div class="metric-item reveal">
+            <span class="metric-item__label">Fidelización</span>
+            <div class="power-metric">
+              <span class="power-metric__value">98</span>
+              <span class="power-metric__exponent">%</span>
+            </div>
+            <p class="metric-item__desc">de clientes retenidos gracias a CRM y seguimiento proactivo.</p>
+          </div>
+          <div class="metric-item reveal">
+            <span class="metric-item__label">Retorno</span>
+            <div class="power-metric">
+              <span class="power-metric__value">10x</span>
+              <span class="power-metric__exponent"></span>
+            </div>
+            <p class="metric-item__desc">en recuperación operativa y retorno de inversión tecnológica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          PROBLEM – "El Desafío Actual"
          ============================================================ -->
     <section class="problem" id="desafio">
@@ -178,6 +220,52 @@
             <p class="problem__card-text">
               Olvídate de términos complejos. Hablamos el idioma de tu negocio y te entregamos herramientas que puedes
               controlar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ESPECIALIDADES – Áreas de Impacto
+         ============================================================ -->
+    <section class="specialties" id="especialidades">
+      <div class="container">
+        <div class="specialties__header reveal">
+          <h2 class="specialties__title">Soluciones que transforman operaciones.</h2>
+          <p class="specialties__subtitle">
+            Nos enfocamos en tres pilares fundamentales para erradicar la fricción y escalar tu empresa con tecnología de élite.
+          </p>
+        </div>
+        <div class="specialties__grid reveal-stagger">
+          <!-- Gestión de Procesos -->
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon-wrap">
+              <span class="material-symbols-outlined filled">account_tree</span>
+            </div>
+            <h3 class="specialty-card__title">Gestión de Procesos</h3>
+            <p class="specialty-card__text">
+              Digitalizamos e interconectamos tus flujos operativos. Olvídate de los cuellos de botella y automatiza la asignación de tareas con reglas de negocio claras.
+            </p>
+          </div>
+          <!-- Gestión de Clientes -->
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon-wrap">
+              <span class="material-symbols-outlined filled">groups</span>
+            </div>
+            <h3 class="specialty-card__title">Gestión de Clientes</h3>
+            <p class="specialty-card__text">
+              Creamos CRM a medida para registrar interacciones, centralizar el historial de clientes, automatizar alertas de seguimiento y potenciar tus ventas sin perder un solo lead.
+            </p>
+          </div>
+          <!-- Gestión Documental -->
+          <div class="specialty-card reveal">
+            <div class="specialty-card__icon-wrap">
+              <span class="material-symbols-outlined filled">folder_managed</span>
+            </div>
+            <h3 class="specialty-card__title">Gestión Documental</h3>
+            <p class="specialty-card__text">
+              Clasificación inteligente y almacenamiento seguro de documentos (ECM). Hacemos que buscar una factura, contrato o reporte tome segundos con indexación avanzada.
             </p>
           </div>
         </div>
@@ -322,6 +410,100 @@
     </section>
 
     <!-- ============================================================
+         ROI SIMULATOR
+         ============================================================ -->
+    <section class="simulator" id="simulador">
+      <div class="container simulator__container">
+        <div class="simulator__header reveal">
+          <span class="label-upper" style="color: var(--tertiary-fixed-dim);">Simulador de Ahorro</span>
+          <h2 class="simulator__title">Calcula el impacto de automatizar.</h2>
+          <p class="simulator__desc">
+            Descubre cuánto dinero y tiempo pierde tu empresa cada año en tareas manuales y procesos repetitivos. Con nuestra tecnología, te ayudamos a recuperar esa inversión.
+          </p>
+        </div>
+        
+        <div class="simulator__panel reveal">
+          <div class="simulator__control">
+            <div class="simulator__control-header">
+              <span class="simulator__label">Tamaño del Equipo</span>
+              <span class="simulator__value-display" id="val-employees">5</span>
+            </div>
+            <input type="range" id="sim-employees" class="simulator__slider" min="1" max="50" value="5" aria-label="Número de empleados" />
+          </div>
+          
+          <div class="simulator__control">
+            <div class="simulator__control-header">
+              <span class="simulator__label">Horas Manuales Semanales</span>
+              <span class="simulator__value-display" id="val-hours">10 hrs</span>
+            </div>
+            <input type="range" id="sim-hours" class="simulator__slider" min="1" max="40" value="10" aria-label="Horas manuales por semana" />
+          </div>
+          
+          <div class="simulator__results">
+            <div class="simulator__result-item">
+              <span class="simulator__result-label">Tiempo Recuperado al Año</span>
+              <span class="simulator__result-value" id="res-hours">1.950h</span>
+            </div>
+            <div class="simulator__result-item">
+              <span class="simulator__result-label">Ahorro Estimado (Basado en $15K/h)</span>
+              <span class="simulator__result-value simulator__result-value--accent" id="res-money">$29,250,000</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FAQ
+         ============================================================ -->
+    <section class="faq" id="faq">
+      <div class="container faq__container">
+        <div class="faq__header reveal">
+          <h2 class="faq__title">Preguntas Frecuentes</h2>
+        </div>
+        <div class="faq__accordion reveal-stagger">
+          
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              ¿Pueden hacer una auditoría de mis herramientas tecnológicas actuales?
+              <span class="material-symbols-outlined faq__icon">expand_more</span>
+            </button>
+            <div class="faq__answer-wrapper">
+              <div class="faq__answer">
+                Sí. Realizamos un diagnóstico integral de las plataformas y el software que ya utilizas. Evaluamos su eficiencia, verificamos si son compatibles para integrarse con nuevos desarrollos e identificamos oportunidades de mejora para potenciar tu infraestructura actual sin empezar desde cero.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              ¿Qué diferencia hay entre un CRM comercial y uno desarrollado a medida?
+              <span class="material-symbols-outlined faq__icon">expand_more</span>
+            </button>
+            <div class="faq__answer-wrapper">
+              <div class="faq__answer">
+                Los CRMs comerciales cobran licencias por usuario y tienen flujos genéricos. Un CRM a medida de E2 se ajusta exactamente a tu proceso de ventas, es propiedad tuya y no tiene cobros ocultos por agregar nuevos empleados.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq__item reveal">
+            <button class="faq__question" aria-expanded="false">
+              ¿El software desarrollado será de mi propiedad?
+              <span class="material-symbols-outlined faq__icon">expand_more</span>
+            </button>
+            <div class="faq__answer-wrapper">
+              <div class="faq__answer">
+                Depende de la modalidad que elijas. Si optas por un desarrollo <strong>a medida</strong>, el software y su código fuente son 100% de tu propiedad. Si prefieres nuestro modelo <strong>SaaS (Software como Servicio)</strong>, la plataforma se arrienda y el código base pertenece a E2 Software Factory, pero <strong>la totalidad de tus datos e información comercial te pertenecerán exclusivamente a ti en todo momento</strong>.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
          WHY E2
          ============================================================ -->
     <section class="why-e2" id="por-que">
@@ -342,7 +524,6 @@
               </p>
             </div>
           </div>
-
           <div class="why-e2__visual reveal">
             <div class="why-e2__img-frame">
               <img class="why-e2__img" loading="lazy"
@@ -357,24 +538,89 @@
     <!-- ============================================================
          CONTACT
          ============================================================ -->
-    <section class="contact" id="contacto" style="text-align: center; padding: 6rem 0;">
-      <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <div class="contact__wrapper reveal">
-          <h2 class="contact__title" style="margin-bottom: 1.5rem;">El mejor momento para optimizar es ahora.</h2>
-          <p style="font-size: 1.125rem; line-height: 1.7; margin-bottom: 2.5rem; color: var(--color-gray-500);">
-            La digitalización no debería ser un proceso tortuoso ni un gasto impagable. Si buscas una asesoría clara y
-            directa para llevar tu negocio al siguiente nivel, WhatsApp es nuestra vía más rápida de comunicación.
-            Cuéntanos tu idea y analicemos juntos cómo hacerla realidad.
-          </p>
-          <a href="https://wa.me/573245396539" class="hero__cta" target="_blank" rel="noopener"
-            style="text-decoration: none; display: inline-flex; align-items: center; background-color: #25D366; color: white; border: none; justify-content: center;">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
-              style="margin-right: 0.5rem;" aria-hidden="true" focusable="false">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-            </svg>
-            Hablemos por WhatsApp
-          </a>
+    <section class="contact" id="contacto">
+      <div class="container">
+        <div class="contact__grid">
+          
+          <!-- Contact Form -->
+          <div class="contact__form-wrapper reveal">
+            <h2 class="contact__title">El mejor momento para optimizar es ahora.</h2>
+            <p style="margin-bottom: 2.5rem; color: var(--on-surface-variant); line-height: 1.6;">
+              Cuéntanos tu desafío y analicemos juntos cómo hacer realidad tu transformación digital.
+            </p>
+            
+            <form class="contact-form" id="contact-form" novalidate>
+              <div class="contact-form__row">
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-nombre">Nombre Completo</label>
+                  <input type="text" id="field-nombre" class="contact-form__input" placeholder="Ej. Juan Pérez" />
+                  <span class="contact-form__error"></span>
+                </div>
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-empresa">Empresa</label>
+                  <input type="text" id="field-empresa" class="contact-form__input" placeholder="Nombre de su empresa" />
+                  <span class="contact-form__error"></span>
+                </div>
+              </div>
+              
+              <div class="contact-form__row">
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-email">Correo Corporativo</label>
+                  <input type="email" id="field-email" class="contact-form__input" placeholder="nombre@empresa.com" />
+                  <span class="contact-form__error"></span>
+                </div>
+                <div class="contact-form__group">
+                  <label class="contact-form__label" for="field-sector">Principal Desafío</label>
+                  <div class="contact-form__select-wrap">
+                    <select id="field-sector" class="contact-form__select">
+                      <option value="" disabled selected>Seleccione una opción</option>
+                      <option value="procesos">Optimizar Procesos (BPM)</option>
+                      <option value="clientes">Gestión de Clientes (CRM)</option>
+                      <option value="documental">Gestión Documental (ECM)</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  <span class="contact-form__error"></span>
+                </div>
+              </div>
+
+              <div class="contact-form__group">
+                <label class="contact-form__label" for="field-dolor">Describa su situación brevemente</label>
+                <textarea id="field-dolor" class="contact-form__textarea" placeholder="Ej. Perdemos mucho tiempo buscando documentos..."></textarea>
+                <span class="contact-form__error"></span>
+              </div>
+
+              <button type="submit" class="contact-form__submit">Enviar Solicitud</button>
+            </form>
+            
+            <div id="form-success" class="contact-form__success">
+              <strong>¡Mensaje enviado con éxito!</strong> Nuestro equipo de arquitectura se pondrá en contacto pronto.
+            </div>
+          </div>
+
+          <!-- Contact Info / Right Column -->
+          <div class="contact__info reveal">
+            <div class="contact__map">
+              <img class="contact__map-img" loading="lazy" src="assets/software-workspace.png" alt="Bogotá mapa" style="opacity: 0.2;"/>
+              <div class="contact__map-pin">
+                <div class="contact__map-badge">
+                  <span class="material-symbols-outlined">location_on</span>
+                  <span class="contact__map-badge-label">Bogotá, Colombia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact__details">
+              <div class="contact__detail-card">
+                <span class="contact__detail-label">WhatsApp Rápido</span>
+                <a href="https://wa.me/573245396539" target="_blank" rel="noopener" class="contact__detail-value" style="color: var(--tertiary-fixed-dim); display: flex; align-items: center; gap: 0.25rem;">
+                  <span class="material-symbols-outlined" style="font-size: 1.25rem;">chat</span>
+                  Escríbenos
+                </a>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
@@ -405,6 +651,8 @@
   <!-- Scripts (deferred for performance) -->
   <script src="js/main.js" defer></script>
   <script src="js/navigation.js" defer></script>
+  <script src="js/simulator.js" defer></script>
+  <script src="js/faq.js" defer></script>
   <script src="js/contact.js" defer></script>
 </body>
 
